@@ -1,0 +1,15 @@
+<form action="/places/add" method="post">
+  <input type="text" name="name" placeholder="Name">
+
+  <select name="type">
+    <option value="coffee">Coffee</option>
+    <option value="shop">Shop</option>
+    <option value="bookstore">Bookstore</option>
+  </select>
+
+  <input type="number" name="lng" step="0.000001" placeholder="longitude">
+  <input type="number" name="lat" step="0.000001" placeholder="latitude">
+
+  <button type="submit">Create place</button>
+
+</form>

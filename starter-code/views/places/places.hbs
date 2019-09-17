@@ -1,0 +1,25 @@
+<h1>Coffe and Books</h1>
+
+{{#if places}}
+<div class="row">
+  {{#each places}}
+  <div class="row__item">
+    <div class="row__item__wrapper">
+      <h2>{{this.name}}</h2>
+      <span>{{this.type}}</span>
+      <a href="/place/{{this._id}}">View</a>
+      <form action="place/{{this.id}}/delete" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
+{{/if}}
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUeQXCyJDlhOtCB8JwWAk8zCxpjk6k-jo"></script>
+<script src="/javascripts/main.js"></script>
